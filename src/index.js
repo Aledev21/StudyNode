@@ -2,6 +2,25 @@ const express = require('express')
 
 const app = express()
 
+
+
+
+
+/**
+ * TIPOS DE PARAMETROS
+ * 
+ * Routes Params =>  Indentificar um recurso editar/deletar/buscar
+ */
+
+
+
+/**
+ * GET -BUSCAR UMA INFORMAÇÃO DENTRO DO SERVIDOR 
+ * POST - INSERIR UMA INFROMAÇÃO NO SERVIDOR 
+ * PUT - ALTERA UMA INFROMAÇÃO NO SERVIDOR 
+ * PATCH - ALTERAR UMA INFORMAÇÃO  ESPECIFICA NO SERVIDOR 
+ * DELETE - DELETAR UMA INFORMAÇÃO NO SERVIDOR 
+ */
 app.get("/", (req, res) =>{
     return res.json({message: 'nodejs fundatations'})
 })
@@ -15,6 +34,7 @@ app.post("/courses", ( req, res) => {
 })
 
 app.put("/courses/:id", ( req, res) => {
+    const 
     return res.json(['CURSO7', 'CURSO2', 'CURSO3', 'CURSO4' ])
 })
 
