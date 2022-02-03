@@ -2,6 +2,8 @@ const express = require('express')
 
 const app = express()
 
+app.use(express.json())
+
 
 
 
@@ -10,6 +12,8 @@ const app = express()
  * TIPOS DE PARAMETROS
  * 
  * Routes Params =>  Indentificar um recurso editar/deletar/buscar
+ * Query Params => Paginação/Filtro
+ * Body Params = > Inserção ou alteração (JSON)
  */
 
 
@@ -26,15 +30,20 @@ app.get("/", (req, res) =>{
 })
 
 app.get("/courses", ( req, res) => {
+    const query = req.query
+    console.log(query)
     return res.json(['CURSO1', 'CURSO2', 'CURSO3' ])
 })
 
 app.post("/courses", ( req, res) => {
+    const body = req.body
+    console.log(body)
     return res.json(['CURSO1', 'CURSO2', 'CURSO3', 'CURSO4' ])
 })
 
 app.put("/courses/:id", ( req, res) => {
-    const 
+    const {id} = req.params // desestruturação
+    console.log(id)
     return res.json(['CURSO7', 'CURSO2', 'CURSO3', 'CURSO4' ])
 })
 
