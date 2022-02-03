@@ -14,7 +14,7 @@ app.post("/courses", ( req, res) => {
     return res.json(['CURSO1', 'CURSO2', 'CURSO3', 'CURSO4' ])
 })
 
-app.post("/courses/:id", ( req, res) => {
+app.put("/courses/:id", ( req, res) => {
     return res.json(['CURSO7', 'CURSO2', 'CURSO3', 'CURSO4' ])
 })
 
