@@ -20,8 +20,11 @@ app.post("/courses/:id", ( req, res) => {
 
 app.patch("/courses/:id", (req, res)=>{
     return res.json(['CURSO7', 'CURSO6', 'CURSO3', 'CURSO4' ])
+})
 
-} )
+app.delete("/courses/:id", (req, res)=>{
+    return res.json(['CURSO4'])
+})
 
 
 app.listen(3000)
